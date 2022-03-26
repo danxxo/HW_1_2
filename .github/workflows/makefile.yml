@@ -1,27 +1,32 @@
-name: Makefile CI
+name: CMake Tests
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: configure
-      run: ./configure
-      
-    - name: Install dependencies
-      run: make
-      
-    - name: Run check
-      run: make check
-      
-    - name: Run distcheck
-      run: make distcheck
+
+    - name: Configure CMake
+      run: cmake -S $GITHUB_WORKSPACE -B ${{runner.workspace}}/build
+
+    - name: Build
+      working-directory: ${{runner.workspace}}/build
+      run: cmake --build .
+
+    - name: Test
+      working-directory: ${{runner.workspace}}/build
+      run: GTEST_OUTPUT=xml:test-results/ GTEST_COLOR=1 ctest -V
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        name: test_results_xml
+        path: ${{runner.workspace}}/build/test-results/**/*.xml
