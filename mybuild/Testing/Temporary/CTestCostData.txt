@@ -1,0 +1,8 @@
+SortTest.swap 1 0.0336332
+SortTest.insertion_10 1 0.0331404
+SortTest.insertion_10000 1 0.268683
+SortTest.bubblesort_10 1 0.0331861
+SortTest.bubblesort_10000 1 0.40456
+SortTest.quicksort_10 0 0
+---
+SortTest.quicksort_10

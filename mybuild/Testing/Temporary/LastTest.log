@@ -1,0 +1,173 @@
+Start testing: Mar 26 03:46 MSK
+----------------------------------------------------------
+1/6 Testing: SortTest.swap
+1/6 Test: SortTest.swap
+Command: "/home/nikita/gitu/cmake-example-repo/mybuild/example_tests" "--gtest_filter=SortTest.swap" "--gtest_also_run_disabled_tests"
+Directory: /home/nikita/gitu/cmake-example-repo/mybuild
+"SortTest.swap" start time: Mar 26 03:46 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/nikita/gitu/cmake-example-repo/mybuild/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SortTest.swap
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SortTest
+[ RUN      ] SortTest.swap
+[       OK ] SortTest.swap (30 ms)
+[----------] 1 test from SortTest (30 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (30 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"SortTest.swap" end time: Mar 26 03:46 MSK
+"SortTest.swap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: SortTest.insertion_10
+2/6 Test: SortTest.insertion_10
+Command: "/home/nikita/gitu/cmake-example-repo/mybuild/example_tests" "--gtest_filter=SortTest.insertion_10" "--gtest_also_run_disabled_tests"
+Directory: /home/nikita/gitu/cmake-example-repo/mybuild
+"SortTest.insertion_10" start time: Mar 26 03:46 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/nikita/gitu/cmake-example-repo/mybuild/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SortTest.insertion_10
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SortTest
+[ RUN      ] SortTest.insertion_10
+[       OK ] SortTest.insertion_10 (30 ms)
+[----------] 1 test from SortTest (30 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (30 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"SortTest.insertion_10" end time: Mar 26 03:46 MSK
+"SortTest.insertion_10" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: SortTest.insertion_10000
+3/6 Test: SortTest.insertion_10000
+Command: "/home/nikita/gitu/cmake-example-repo/mybuild/example_tests" "--gtest_filter=SortTest.insertion_10000" "--gtest_also_run_disabled_tests"
+Directory: /home/nikita/gitu/cmake-example-repo/mybuild
+"SortTest.insertion_10000" start time: Mar 26 03:46 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/nikita/gitu/cmake-example-repo/mybuild/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SortTest.insertion_10000
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SortTest
+[ RUN      ] SortTest.insertion_10000
+[       OK ] SortTest.insertion_10000 (265 ms)
+[----------] 1 test from SortTest (265 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (265 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.27 sec
+----------------------------------------------------------
+Test Passed.
+"SortTest.insertion_10000" end time: Mar 26 03:46 MSK
+"SortTest.insertion_10000" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: SortTest.bubblesort_10
+4/6 Test: SortTest.bubblesort_10
+Command: "/home/nikita/gitu/cmake-example-repo/mybuild/example_tests" "--gtest_filter=SortTest.bubblesort_10" "--gtest_also_run_disabled_tests"
+Directory: /home/nikita/gitu/cmake-example-repo/mybuild
+"SortTest.bubblesort_10" start time: Mar 26 03:46 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/nikita/gitu/cmake-example-repo/mybuild/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SortTest.bubblesort_10
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SortTest
+[ RUN      ] SortTest.bubblesort_10
+[       OK ] SortTest.bubblesort_10 (30 ms)
+[----------] 1 test from SortTest (30 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (30 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"SortTest.bubblesort_10" end time: Mar 26 03:46 MSK
+"SortTest.bubblesort_10" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: SortTest.bubblesort_10000
+5/6 Test: SortTest.bubblesort_10000
+Command: "/home/nikita/gitu/cmake-example-repo/mybuild/example_tests" "--gtest_filter=SortTest.bubblesort_10000" "--gtest_also_run_disabled_tests"
+Directory: /home/nikita/gitu/cmake-example-repo/mybuild
+"SortTest.bubblesort_10000" start time: Mar 26 03:46 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/nikita/gitu/cmake-example-repo/mybuild/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SortTest.bubblesort_10000
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SortTest
+[ RUN      ] SortTest.bubblesort_10000
+[       OK ] SortTest.bubblesort_10000 (402 ms)
+[----------] 1 test from SortTest (402 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (402 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.40 sec
+----------------------------------------------------------
+Test Passed.
+"SortTest.bubblesort_10000" end time: Mar 26 03:46 MSK
+"SortTest.bubblesort_10000" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: SortTest.quicksort_10
+6/6 Test: SortTest.quicksort_10
+Command: "/home/nikita/gitu/cmake-example-repo/mybuild/example_tests" "--gtest_filter=SortTest.quicksort_10" "--gtest_also_run_disabled_tests"
+Directory: /home/nikita/gitu/cmake-example-repo/mybuild
+"SortTest.quicksort_10" start time: Mar 26 03:46 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/nikita/gitu/cmake-example-repo/mybuild/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SortTest.quicksort_10
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SortTest
+[ RUN      ] SortTest.quicksort_10
+91481 231471 435611 492823 560164 703768 772966 879292 869812 906401 /home/nikita/gitu/cmake-example-repo/example_test.cpp:58: Failure
+Value of: arr_10[i-1] <= arr_10[i]
+  Actual: false
+Expected: true
+[  FAILED  ] SortTest.quicksort_10 (30 ms)
+[----------] 1 test from SortTest (30 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (30 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SortTest.quicksort_10
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"SortTest.quicksort_10" end time: Mar 26 03:46 MSK
+"SortTest.quicksort_10" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 26 03:46 MSK
