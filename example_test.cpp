@@ -46,14 +46,17 @@ TEST_F(SortTest, bubblesort_10000){
 }
 
 TEST_F(SortTest, quicksort_10){
-arr_10;
-size_t vec_size = arr_10.size();
-    quicksort(arr_10, vec_size);
-    //////////
-    for(int i = 0; i < vec_size; i++){
-        std::cout << arr_10[i] << " ";
+    arr_10;
+    size_t vec_size = arr_10.size();
+    quicksort(arr_10, 0, arr_10.size() - 1);
+    for(int i = 1; i < vec_size; i++){
+        EXPECT_TRUE(arr_10[i-1] <= arr_10[i]);
     }
-    //////////
+}
+TEST_F(SortTest, quicksort_10000){
+    arr_10000;
+    size_t vec_size = arr_10.size();
+    quicksort(arr_10, 0, arr_10.size() - 1);
     for(int i = 1; i < vec_size; i++){
         EXPECT_TRUE(arr_10[i-1] <= arr_10[i]);
     }
