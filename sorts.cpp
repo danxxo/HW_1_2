@@ -135,67 +135,6 @@ void puzir_sort(T &array, size_t size){
 //
 //}
 
-template<typename SomeIterator>
-void merge_sort(SomeIterator begin, SomeIterator end) {
-    size_t size = std::distance(begin, end);
-    if (size > 1) {
-        size_t left_size = size / 2;
-        size_t right_size = size - left_size;
-        SomeIterator sep = begin;
-        std::advance(begin, left_size);
-        merge_sort(sep, begin);
-        merge_sort(begin, end);
-        std::advance(begin, -left_size);
-        size_t lindex = 0, rindex = left_size, index = 0;
-        SomeIterator *tmp_array = new SomeIterator[size];
-        while (lindex < left_size || rindex < size) {
-            std::advance(begin, lindex);
-            SomeIterator lin = begin;
-            std::advance(begin, -lindex);
-            std::advance(begin, rindex);
-            SomeIterator rin = begin;
-            std::advance(begin, -rindex);
-            if (*lin < *rin) {
-                std::advance(begin, lindex);
-                tmp_array[index++] = begin;
-                std::advance(begin, -lindex);
-                ++lindex;
-            } else {
-                std::advance(begin, rindex);
-                tmp_array[index++] = begin;
-                std::advance(begin, -rindex);
-                ++rindex;
-            }
-            if (lindex == left_size) {
-                for (size_t i = rindex; i < size; i++) {
-                    std::advance(begin, i);
-                    tmp_array[index++] = begin;
-                    std::advance(begin, -i);
-                }
-                break;
-            }
-            if (rindex == size) {
-                for (size_t i = lindex; i < left_size; i++) {
-                    std::advance(begin, i);
-                    tmp_array[index++] = begin;
-                    std::advance(begin, -i);
-                }
-                break;
-            }
-        }
-        std::vector<typeof(*begin)> tmp_array2;
-        tmp_array2.resize(size);
-        for (int i = 0; i < size; ++i)
-            tmp_array2[i] = *tmp_array[i];
-        for (auto i = 0; i < size; ++i) {
-            std::advance(begin, i);
-            *begin = tmp_array2[i];
-            std::advance(begin, -i);
-        }
-        delete[] tmp_array;
-    }
-}
-
 template<typename T>
 void quicksort(T& array, size_t size) {
 
