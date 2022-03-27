@@ -136,23 +136,48 @@ void puzir_sort(T &array, size_t size){
 //}
 
 template<typename T>
-void quicksort(T& array, size_t size) {
+int partition(T& array, int low, int high) {
 
-    for(int k = size -1; k > 0; k--){
-        typeof(array[size - 1]) central_num = array[size / 2];
-        int central_num_pos = size / 2;
-        int i = 0, j = size - 1;
-        while (i <= j) {
-            while (i < central_num_pos && array[i] < central_num) {
-                i++;
-            }
-            while (j > central_num_pos && array[j] > central_num) {
-                j--;
-            }
-            swap(array[i], array[j]);
+    // select the rightmost element as pivot
+    int pivot = array[high];
+
+    // pointer for greater element
+    int i = (low - 1);
+
+    // traverse each element of the array
+    // compare them with the pivot
+    for (int j = low; j < high; j++) {
+        if (array[j] <= pivot) {
+
+            // if element smaller than pivot is found
+            // swap it with the greater element pointed by i
             i++;
-            j--;
+
+            // swap element at i with element at j
+            swap(array[i], array[j]);
         }
-        quicksort(array, k);
+    }
+
+    // swap pivot with the greater element at i
+    swap(array[i + 1], array[high]);
+
+    // return the partition point
+    return (i + 1);
+}
+
+template<typename T>
+void quicksort(T& array, int low, int high) {
+    if (low < high) {
+
+        // find the pivot element such that
+        // elements smaller than pivot are on left of pivot
+        // elements greater than pivot are on righ of pivot
+        int pi = partition(array, low, high);
+
+        // recursive call on the left of pivot
+        quicksort(array, low, pi - 1);
+
+        // recursive call on the right of pivot
+        quicksort(array, pi + 1, high);
     }
 }
