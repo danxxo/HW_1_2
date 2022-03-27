@@ -61,3 +61,10 @@ TEST_F(SortTest, quicksort_10000){
         EXPECT_TRUE(arr_10[i-1] <= arr_10[i]);
     }
 }
+TEST_F(SortTest, merge10){
+    arr_10;
+    merge_sort(arr_10.begin(), arr_10.end());
+    for(int i = 1; i < arr_10.size(); i++){
+        EXPECT_TRUE(arr_10[i-1] <= arr_10[i]);
+    }
+}
