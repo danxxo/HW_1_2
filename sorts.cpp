@@ -57,32 +57,30 @@ void swap(T &num1, T &num2) {
     num2 = k;
 };
 
-//            size_t a_length = a.size();
-//            int key, i;
-//            int j = 1;
-//            for (int j = 1; j < a_length ; ++j) {
-//                key = a[j];
-//                i = j - 1;
-//                while (i >= 0 && a[i] > key) {
-//                    swap(a[i], a[i+1]);
-//                    i--;
-//                }
-//            }
-//            for (int i = 0; i < a_length; i++) std::cout << a[i] << " " ;
-
-///insertion already
-template <typename T>
-void insertion_sort(T &array, size_t size) {
+///insertion already using array and size
+template<typename T>
+void insertion_sort_array_size(T &array, size_t size) {
     int i, j;
-    typeof(array[size-1])key;
+    typeof(array[size - 1]) key;
     for (i = 1; i < size; ++i) {
         key = array[i];
         j = i - 1;
         while (j >= 0 && array[j] > key) {
             array[j + 1] = array[j];
-            j = j - 1;
+            j--;
         }
-        array[j + 1] = key;
+    }
+}
+
+///insertion already using iterators
+template<typename Iterator>
+void insertion_sort(Iterator begin, Iterator end) {
+    for (Iterator i = begin + 1; i < end; i++) {
+        Iterator j = i;
+        while (j > begin && *(j - 1) > *j) {
+            swap(*(j - 1), *j);
+            j--;
+        }
     }
 }
 
