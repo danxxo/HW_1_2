@@ -194,23 +194,11 @@ void merge_sort(SomeIterator begin, SomeIterator end) {
         delete[] tmp_array;
     }
 }
-//template<typename T>
-//void partition(T& array, size_t low, size_t high){
-//    typeof(array[high]) pivot = array[high];
-//    size_t higher_pointer = 0;
-//    size_t lower_pointer;
-//
-//    while(higher_pointer<high) {
-//        if(array[higher_pointer] > pivot) {
-//
-//        }
-//    }
-//    swap(array[lower_pointer], pivot);
-//
-//}
-
+///функция которая берет опорное число и разбивает массив на две части
+///слева то что меньше опоры, справа то что больше
 template<typename T>
-int partition(T& array, int low, int high) {
+int partition(T &array, int low, int high) {
+
     int pivot = array[high];
 
     // pointer for greater element
@@ -225,12 +213,30 @@ int partition(T& array, int low, int high) {
     swap(array[i + 1], array[high]);
     return (i + 1);
 }
-
+///функция быстрой сортировки используя в кач-ве аргументов массив и два крайних числа
 template<typename T>
-void quicksort(T& array, int low, int high) {
+void quicksort(T &array, int low, int high) {
     if (low < high) {
         int pi = partition(array, low, high);
         quicksort(array, low, pi - 1);
         quicksort(array, pi + 1, high);
     }
+}
+///функция быстрой сортировки которая принимает итераторы начала и конца массива
+template<typename Iterator>
+void quicksort(Iterator begin, Iterator end) {
+    if (end - begin <= 1) return;
+    int z = *(begin + (end - begin) / 2);
+    Iterator begbeg = begin, enen = end - 1;
+    while (begbeg <= enen) {
+        while (*begbeg < z) begbeg++;
+        while (*enen > z) enen--;
+        if (begbeg <= enen) {
+            swap(*begbeg, *enen);
+            begbeg++;
+            enen--;
+        }
+    }
+    if (begin < enen) quicksort(begin, enen + 1);
+    if (begbeg < end) quicksort(begbeg, end);
 }
