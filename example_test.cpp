@@ -141,3 +141,37 @@ TEST_F(SortTest, merge10000) {
         EXPECT_TRUE(arr_10000[i - 1] <= arr_10000[i]);
     }
 }
+///arr100000
+TEST_F(SortTest, insertion_100000) {
+    arr_100000;
+    Timer time;
+    insertion_sort(arr_100000.begin(), arr_100000.end());
+    for (int i = 1; i < arr_100000.size(); i++) {
+        EXPECT_TRUE(arr_100000[i - 1] <= arr_100000[i]);
+    }
+}
+TEST_F(SortTest, bubblesort_100000) {
+    arr_100000;
+    Timer time;
+    bubble_sort(arr_100000.begin(), arr_100000.end());
+    for (int i = 1; i < arr_100000.size(); i++) {
+        EXPECT_TRUE(arr_100000[i - 1] <= arr_100000[i]);
+    }
+}
+TEST_F(SortTest, quicksort_100000) {
+    arr_100000;
+    Timer time;
+    quick_sort(arr_100000.begin(), arr_100000.end());
+    for (int i = 1; i < 10; i++) {
+        EXPECT_TRUE(arr_100000[i - 1] <= arr_100000[i]);
+    }
+}
+TEST_F(SortTest, merge100000) {
+    arr_100000;
+    Timer time;
+    merge_sort(arr_100000.begin(), arr_100000.end());
+    for (int i = 1; i < arr_100000.size(); i++) {
+        EXPECT_TRUE(arr_100000[i - 1] <= arr_100000[i]);
+    }
+}
+///
