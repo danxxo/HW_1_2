@@ -11,8 +11,9 @@ FetchContent_MakeAvailable(googletest)
 
 set(CMAKE_CXX_STANDARD 17)
 set(TEST_NAME ${PROJECT_NAME}_tests)
-add_executable(${TEST_NAME} example_test.cpp sorts.cpp)
-target_link_libraries(${TEST_NAME} gtest_main)
+add_executable(${TEST_NAME} example_test.cpp)
+add_subdirectory(sortings)
+target_link_libraries(${TEST_NAME} gtest_main sortings)
 
 enable_testing()
 include(GoogleTest)

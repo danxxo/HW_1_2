@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <string>
-#include "sorts.cpp"
+#include "sortings/sorts.h"
 
 TEST_F(SortTest, swap) {
     long a = 15;
